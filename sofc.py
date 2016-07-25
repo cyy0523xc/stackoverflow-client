@@ -62,8 +62,9 @@ def use_style(string, mode='', fore='', back=''):
     return '%s%s%s' % (style, string, end)
 
 
-def get(selector, parent, default=""):
+def parse(selector, parent, default=""):
     item = pq(selector, parent)
+    print item
     if len(item) == 1:
         val = item[0].text
     else:
@@ -85,10 +86,10 @@ def cli(word, page, pagesize):
 
     for res in results:
         # 投票数
-        vote = get("span.vote-count-post strong", res, "0")
+        vote = parse("span.vote-count-post strong", res, default="0")
 
         # 回答数
-        answer = get("div.answered-accepted strong", res, "0")
+        answer = parse("div.answered-accepted strong", res, default="0")
 
         # 标题
         title = pq("div.result-link span a", res)[0].text.strip()
