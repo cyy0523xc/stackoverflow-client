@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sofc',
-    version='0.1.4',
+    version='0.1.5',
     keywords=('stackoverflow'),
     description='stackoverflow client for quick search',
     license='MIT License',
@@ -24,7 +24,7 @@ setup(
     scripts=["sofc/sofc.py"],
     entry_points={
         "console_scripts": [
-            'sofc = sofc.sofc:main'
+            'sofc = sofc:main'
         ]
     }
 )
