@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sofc',
-    version='0.1.5',
+    version='0.1.6',
     keywords=('stackoverflow'),
     description='stackoverflow client for quick search',
     license='MIT License',
